@@ -1,0 +1,63 @@
+<!--
+    CSS FLOAT PROPERTY!
+    This can be effectively used to wrap our text around some element(as like in newspapers where-in the texts are wrapped around the images.)
+
+    This property actually helps the devolopers to wrap the text around some particular element.
+    There are other uses of this property as well like- wrapping one element around the other to allign things on the screen as per our needs.
+    But the problem with other uses that are stated above is that there are better technologies to achive the same result like that of float with even less efforts( as like the bootstrap/ css-flex etc. using in the modern web design).The use float to wrap one element around the other is deprecated.
+    SO IT IS OFTEN RECOMMENDED TO USE FLOAT ONLY FOR WRAPPING TEXTS(ONLY) AROUND AN ELEMENT, AND NOT TO USE IT TO LAYOUT THINGS(ONE ELEMENT AROUND THE OTHER) BECAUSE THERE ARE BETTER TECHNOLOGIES AVAILABLE IN MODERN WEB-DESIGNING TOOLS.
+
+    HOW TO WRITE THE CODE TO ACHIEVE THIS ;
+
+    1.) Inside <style> tag we should specify the element using css rules,selectors and their combinations and use a float attribute inside the rules and set its value to: left/right etc as shown the below code.
+
+        img{
+            float: left;   Here the img will float/allign to the left and all the text in that hierarchy will wrap around the img.
+        }
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FLOAT</title>
+    <style>
+        img{
+            float: left;
+        }
+
+        footer{
+            clear: left;
+        }
+
+        .special{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <img src="./cat.jpeg" alt="cat">
+    <img class="special" src="./dog.jpeg" alt="dog">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente maxime assumenda enim nisi nam id vero minus consequuntur sed magni quod corporis, laudantium necessitatibus. Reprehenderit quidem nemo dolor blanditiis iure. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique illum ipsum doloribus eum non labore, maxime placeat est quibusdam, aliquam illo? Necessitatibus provident minus suscipit quaerat doloribus beatae libero fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, cumque et! Possimus cumque aliquid repudiandae nesciunt enim? Odit sapiente aspernatur asperiores tenetur magnam, omnis neque architecto, totam mollitia sit numquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit eius libero deserunt nisi et repellat in, quisquam cupiditate eveniet corporis dolorum voluptates eligendi perspiciatis quos dolor veritatis. Dolor, saepe quam!</p>
+    <footer>copyright. CSS FLOAT PROPERTY</footer>
+</body>
+</html>
+
+<!--
+    Note: If we want some element of the hierarchy to be freed from float then we can specify the element using CSS SELECTORS inside the css rules and set a CLEAR attribute to that element and given a value of the float from which we want it to be cleared off.
+    A sample code (a section of the main code above in this file) is shown below;
+
+    footer{
+            clear: left;
+        }
+
+    Here in this case, the footer is freed from float: left; of the previous img element.
+    If we wanted to clear the footer from float both from right and left, then in that case we can set the clear attribute to a value both (in case of multiple elements set to float at the same hierarchial level). 
+    
+    footer{
+            clear: both;
+        }
+
+-->
